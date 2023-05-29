@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace interactive_tutorial.entities
 {
-    internal class User
+    public abstract class User
     {
+        public int Id { get; set; }
+        
+        public string Login { get; set; }
+        
+        public string Password { get; set; }
+
+        
     }
 }

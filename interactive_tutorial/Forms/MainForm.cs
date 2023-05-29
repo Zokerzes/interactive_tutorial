@@ -16,5 +16,20 @@ namespace interactive_tutorial
         {
             InitializeComponent();
         }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ForwardButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

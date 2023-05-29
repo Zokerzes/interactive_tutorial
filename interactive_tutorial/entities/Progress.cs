@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace interactive_tutorial
+namespace interactive_tutorial.entities
 {
-    internal class Progress
+    public class Progress
     {
+        public int Id { get; set; }
+
+        public int Topic { get; set; }
+
+        public int Chapter { get; set; }
     }
 }

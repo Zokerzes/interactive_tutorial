@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace interactive_tutorial.entities
 {
-    internal class Admin
+    public class Admin : User
     {
+
     }
 }
