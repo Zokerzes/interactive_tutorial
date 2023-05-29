@@ -16,5 +16,15 @@ namespace interactive_tutorial
         {
             InitializeComponent();
         }
+
+        private void EntranceButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AutorizationButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
