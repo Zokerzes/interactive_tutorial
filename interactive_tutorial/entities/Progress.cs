@@ -1,4 +1,4 @@
-﻿namespace interactive_tutorial.entities
+﻿namespace interactive_tutorial.Entities
 {
     public class Progress
     {
