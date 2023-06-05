@@ -28,80 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            numberTestNumericUpDown = new NumericUpDown();
-            nameTextBox = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)numberTestNumericUpDown).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1 = new GroupBox();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // numberTestNumericUpDown
+            // groupBox1
             // 
-            numberTestNumericUpDown.Location = new Point(12, 120);
-            numberTestNumericUpDown.Name = "numberTestNumericUpDown";
-            numberTestNumericUpDown.Size = new Size(168, 23);
-            numberTestNumericUpDown.TabIndex = 0;
+            groupBox1.Controls.Add(radioButton3);
+            groupBox1.Controls.Add(radioButton2);
+            groupBox1.Controls.Add(radioButton1);
+            groupBox1.Location = new Point(12, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(259, 167);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "groupBox1";
             // 
-            // nameTextBox
+            // radioButton1
             // 
-            nameTextBox.Location = new Point(12, 47);
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(168, 23);
-            nameTextBox.TabIndex = 3;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(15, 54);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(94, 19);
+            radioButton1.TabIndex = 0;
+            radioButton1.TabStop = true;
+            radioButton1.Text = "radioButton1";
+            radioButton1.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // radioButton2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(12, 29);
-            label1.Name = "label1";
-            label1.Size = new Size(39, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Name";
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(15, 79);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(94, 19);
+            radioButton2.TabIndex = 1;
+            radioButton2.TabStop = true;
+            radioButton2.Text = "radioButton2";
+            radioButton2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // radioButton3
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(12, 102);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Номер теста";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(257, 29);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(484, 307);
-            dataGridView1.TabIndex = 6;
+            radioButton3.AutoSize = true;
+            radioButton3.Location = new Point(15, 104);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(94, 19);
+            radioButton3.TabIndex = 1;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "radioButton2";
+            radioButton3.UseVisualStyleBackColor = true;
             // 
             // TestForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(nameTextBox);
-            Controls.Add(numberTestNumericUpDown);
+            Controls.Add(groupBox1);
             Name = "TestForm";
             Text = "TestForm";
-            ((System.ComponentModel.ISupportInitialize)numberTestNumericUpDown).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private NumericUpDown numberTestNumericUpDown;
-        private TextBox nameTextBox;
-        private Label label1;
-        private Label label2;
-        private DataGridView dataGridView1;
+        private GroupBox groupBox1;
+        private RadioButton radioButton3;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
     }
 }
