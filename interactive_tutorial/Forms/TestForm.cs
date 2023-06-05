@@ -17,7 +17,9 @@ namespace interactive_tutorial
             InitializeComponent();
         }
 
+        private void TestForm_Load(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

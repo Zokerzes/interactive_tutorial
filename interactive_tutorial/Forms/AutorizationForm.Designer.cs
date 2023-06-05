@@ -34,6 +34,7 @@
             label2 = new Label();
             entranceButton = new Button();
             autorizationButton = new Button();
+            btnStartFormTest = new Button();
             SuspendLayout();
             // 
             // loginTextBox
@@ -88,12 +89,23 @@
             autorizationButton.UseVisualStyleBackColor = true;
             autorizationButton.Click += AutorizationButton_Click;
             // 
+            // btnStartFormTest
+            // 
+            btnStartFormTest.Location = new Point(15, 369);
+            btnStartFormTest.Name = "btnStartFormTest";
+            btnStartFormTest.Size = new Size(119, 26);
+            btnStartFormTest.TabIndex = 4;
+            btnStartFormTest.Text = "_start_form_test_";
+            btnStartFormTest.UseVisualStyleBackColor = true;
+            btnStartFormTest.Click += EntranceButton_Click;
+            // 
             // AutorizationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(411, 407);
             Controls.Add(autorizationButton);
+            Controls.Add(btnStartFormTest);
             Controls.Add(entranceButton);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -113,5 +125,6 @@
         private Label label2;
         private Button entranceButton;
         private Button autorizationButton;
+        private Button btnStartFormTest;
     }
 }
