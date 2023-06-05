@@ -1,4 +1,5 @@
-﻿using System;
+﻿using interactive_tutorial.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +23,10 @@ namespace interactive_tutorial
         //для тестирования
         private void EntranceButton_Click(object sender, EventArgs e)
         {
-            TestForm testForm = new TestForm();
+            Student student = new Student();
+            TestForm testForm = new TestForm(student);
             testForm.ShowDialog();
+           
         }
         #endregion 
 

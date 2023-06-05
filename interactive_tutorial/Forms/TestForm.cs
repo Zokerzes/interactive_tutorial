@@ -1,4 +1,5 @@
-﻿using System;
+﻿using interactive_tutorial.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,11 @@ namespace interactive_tutorial
         {
             InitializeComponent();
         }
+        public TestForm(Student student) 
+        {
+            InitializeComponent();
+        }
+
 
         private void TestForm_Load(object sender, EventArgs e)
         {
