@@ -4,7 +4,7 @@
     {
         public int Id { get; set; }
 
-        public int Topic { get; set; }
+        public int Theme { get; set; }
 
         public int Chapter { get; set; }
     }

@@ -18,19 +18,6 @@ namespace interactive_tutorial.Forms
         public SelectForm(User user)
         {
             InitializeComponent();
-            this.user = user;
-            switch (user.Role)
-            {
-                case UserRole.Admin:
-                    manager_Button.Enabled = false;
-                    break;
-                case UserRole.Manager:
-                    Test_Button.Enabled = false;
-                    break;
-                case UserRole.Student:
-                    Autorization_Button.Enabled = false; 
-                    break;
-            }
         }
 
         private void manager_Button_Click(object sender, EventArgs e)

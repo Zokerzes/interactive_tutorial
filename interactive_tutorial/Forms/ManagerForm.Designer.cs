@@ -52,7 +52,6 @@
             changeRate_Button2.TabIndex=1;
             changeRate_Button2.Text="Rate";
             changeRate_Button2.UseVisualStyleBackColor=true;
-            changeRate_Button2.Click+=changeRate_Button2_Click;
             // 
             // button3
             // 

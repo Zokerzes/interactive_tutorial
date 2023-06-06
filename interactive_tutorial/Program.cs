@@ -1,3 +1,6 @@
+using interactive_tutorial.Context;
+using Microsoft.EntityFrameworkCore;
+
 namespace interactive_tutorial
 {
     internal static class Program
@@ -8,8 +11,8 @@ namespace interactive_tutorial
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            var context = new InteractiveTutorialContext();
+            context.Database.Migrate();
             ApplicationConfiguration.Initialize();
             Application.Run(new AutorizationForm());
         }
