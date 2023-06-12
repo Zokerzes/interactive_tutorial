@@ -32,18 +32,18 @@
             addAbswer_Button=new Button();
             estimation_Button=new Button();
             name_TextBox=new TextBox();
-            numericUpDown1=new NumericUpDown();
-            numericUpDown2=new NumericUpDown();
-            numericUpDown3=new NumericUpDown();
+            time_NumericUpDown=new NumericUpDown();
+            questNumber_NumericUpDown=new NumericUpDown();
+            questTest_NumericUpDown=new NumericUpDown();
             topic_ComboBox=new ComboBox();
             selectedTopic_ListBox=new ListBox();
             label1=new Label();
             label2=new Label();
             label3=new Label();
             label4=new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)time_NumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)questNumber_NumericUpDown).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)questTest_NumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // addStudent_Button
@@ -54,7 +54,7 @@
             addStudent_Button.TabIndex=0;
             addStudent_Button.Text="Добавить";
             addStudent_Button.UseVisualStyleBackColor=true;
-            
+            addStudent_Button.Click+=addStudent_Button_Click;
             // 
             // addAbswer_Button
             // 
@@ -64,6 +64,7 @@
             addAbswer_Button.TabIndex=1;
             addAbswer_Button.Text="Добавить ответ";
             addAbswer_Button.UseVisualStyleBackColor=true;
+            addAbswer_Button.Click+=addAbswer_Button_Click;
             // 
             // estimation_Button
             // 
@@ -73,6 +74,7 @@
             estimation_Button.TabIndex=2;
             estimation_Button.Text="Оценка";
             estimation_Button.UseVisualStyleBackColor=true;
+            estimation_Button.Click+=estimation_Button_Click;
             // 
             // name_TextBox
             // 
@@ -81,26 +83,26 @@
             name_TextBox.Size=new Size(140, 23);
             name_TextBox.TabIndex=3;
             // 
-            // numericUpDown1
+            // time_NumericUpDown
             // 
-            numericUpDown1.Location=new Point(26, 141);
-            numericUpDown1.Name="numericUpDown1";
-            numericUpDown1.Size=new Size(140, 23);
-            numericUpDown1.TabIndex=4;
+            time_NumericUpDown.Location=new Point(26, 141);
+            time_NumericUpDown.Name="time_NumericUpDown";
+            time_NumericUpDown.Size=new Size(140, 23);
+            time_NumericUpDown.TabIndex=4;
             // 
-            // numericUpDown2
+            // questNumber_NumericUpDown
             // 
-            numericUpDown2.Location=new Point(26, 204);
-            numericUpDown2.Name="numericUpDown2";
-            numericUpDown2.Size=new Size(140, 23);
-            numericUpDown2.TabIndex=5;
+            questNumber_NumericUpDown.Location=new Point(26, 204);
+            questNumber_NumericUpDown.Name="questNumber_NumericUpDown";
+            questNumber_NumericUpDown.Size=new Size(140, 23);
+            questNumber_NumericUpDown.TabIndex=5;
             // 
-            // numericUpDown3
+            // questTest_NumericUpDown
             // 
-            numericUpDown3.Location=new Point(26, 262);
-            numericUpDown3.Name="numericUpDown3";
-            numericUpDown3.Size=new Size(140, 23);
-            numericUpDown3.TabIndex=6;
+            questTest_NumericUpDown.Location=new Point(26, 262);
+            questTest_NumericUpDown.Name="questTest_NumericUpDown";
+            questTest_NumericUpDown.Size=new Size(140, 23);
+            questTest_NumericUpDown.TabIndex=6;
             // 
             // topic_ComboBox
             // 
@@ -120,6 +122,7 @@
             selectedTopic_ListBox.Name="selectedTopic_ListBox";
             selectedTopic_ListBox.Size=new Size(486, 244);
             selectedTopic_ListBox.TabIndex=8;
+            selectedTopic_ListBox.SelectedIndexChanged+=selectedTopic_ListBox_SelectedIndexChanged;
             // 
             // label1
             // 
@@ -168,18 +171,18 @@
             Controls.Add(label1);
             Controls.Add(selectedTopic_ListBox);
             Controls.Add(topic_ComboBox);
-            Controls.Add(numericUpDown3);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
+            Controls.Add(questTest_NumericUpDown);
+            Controls.Add(questNumber_NumericUpDown);
+            Controls.Add(time_NumericUpDown);
             Controls.Add(name_TextBox);
             Controls.Add(estimation_Button);
             Controls.Add(addAbswer_Button);
             Controls.Add(addStudent_Button);
             Name="AddStudentForm";
             Text="AddStudentForm";
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)time_NumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)questNumber_NumericUpDown).EndInit();
+            ((System.ComponentModel.ISupportInitialize)questTest_NumericUpDown).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,9 +193,9 @@
         private Button addAbswer_Button;
         private Button estimation_Button;
         private TextBox name_TextBox;
-        private NumericUpDown numericUpDown1;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
+        private NumericUpDown time_NumericUpDown;
+        private NumericUpDown questNumber_NumericUpDown;
+        private NumericUpDown questTest_NumericUpDown;
         private ComboBox topic_ComboBox;
         private ListBox selectedTopic_ListBox;
         private Label label1;
