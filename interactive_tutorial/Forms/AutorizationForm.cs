@@ -14,9 +14,24 @@ namespace interactive_tutorial
 {
     public partial class AutorizationForm : Form
     {
-        public AutorizationForm()
+        private User newUser;
+        public User NewUser
+        {
+            get
+            {
+                return NewUser;
+            }
+        }
+        public AutorizationForm(User user)
         {
             InitializeComponent();
+            userRole_ComboBox.SelectedIndex = 0;
+        }
+        private void AutorizationButton_Click(object sender, EventArgs e)
+        {
+            newUser = new User(FirstName_TextBox.Text, LastName_TextBox.Text, Email_TextBox.Text,
+                PhoneNumber_TextBox.Text, login_TextBox.Text, password_TextBox.Text, (UserRole)userRole_ComboBox.SelectedIndex);
+            this.DialogResult = DialogResult.OK;
         }
 
         #region test{
@@ -27,12 +42,10 @@ namespace interactive_tutorial
             TestForm testForm = new TestForm(student);
             testForm.ShowDialog();
            
+            this.DialogResult = DialogResult.OK;
         }
         #endregion 
 
-        private void AutorizationButton_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
