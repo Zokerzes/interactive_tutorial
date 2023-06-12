@@ -38,11 +38,13 @@ namespace interactive_tutorial
         //для тестирования
         private void EntranceButton_Click(object sender, EventArgs e)
         {
+
             Student student = new Student();
             TestForm testForm = new TestForm(student);
             testForm.ShowDialog();
            
             this.DialogResult = DialogResult.OK;
+
         }
         #endregion 
 

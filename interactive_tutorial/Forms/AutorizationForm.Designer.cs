@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+            loginTextBox = new TextBox();
+            passwordTextBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            entranceButton = new Button();
+            autorizationButton = new Button();
+            btnStartFormTest = new Button();
+
             login_TextBox=new TextBox();
             password_TextBox=new TextBox();
             label1=new Label();
@@ -43,6 +52,7 @@
             FirstName_TextBox=new TextBox();
             label5=new Label();
             label6=new Label();
+
             SuspendLayout();
             // 
             // login_TextBox
@@ -216,6 +226,9 @@
         private Label label2;
         private Button entranceButton;
         private Button autorizationButton;
+
+        private Button btnStartFormTest;
+
         private TextBox Email_TextBox;
         private Label label3;
         private TextBox PhoneNumber_TextBox;
@@ -225,5 +238,6 @@
         private TextBox FirstName_TextBox;
         private Label label5;
         private Label label6;
+
     }
 }

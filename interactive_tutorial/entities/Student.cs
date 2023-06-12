@@ -5,6 +5,17 @@ namespace interactive_tutorial.Entities
 {
     public class Student : User
     {
+        public Progress progress ;
+
+        Student student()
+        {
+            Progress progress = new Progress();
+            return this;
+        }
+        void getProgress()
+        {
+            progress.getProgrss();
+            
         public Progress Progress { get; set; }
 
         public string Name { get; set; }
@@ -31,6 +42,7 @@ namespace interactive_tutorial.Entities
         public override string ToString()
         {
             return $"{Name} Ответ:{Answer} Время: {Time}";
+
         }
     }
 }
