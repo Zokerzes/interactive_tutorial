@@ -13,11 +13,14 @@ namespace interactive_tutorial
 {
     public partial class TestForm : Form
     {
+        Student student;
+        Progress progress = new Progress();
         public TestForm()
         {
             InitializeComponent();
+            student = new Student();
         }
-        public TestForm(Student student) 
+        public TestForm(Student student)
         {
             InitializeComponent();
         }
@@ -26,6 +29,11 @@ namespace interactive_tutorial
         private void TestForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_test_Click(object sender, EventArgs e)
+        {
+           // student.progress.getProgrss()
         }
     }
 }

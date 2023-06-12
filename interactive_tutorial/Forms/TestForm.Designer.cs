@@ -33,6 +33,7 @@
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
+            btn_test = new Button();
             groupBox_q1.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,11 +91,23 @@
             radioButton1.Text = "ответ_1";
             radioButton1.UseVisualStyleBackColor = true;
             // 
+            // btn_test
+            // 
+            btn_test.BackgroundImageLayout = ImageLayout.None;
+            btn_test.Location = new Point(15, 195);
+            btn_test.Name = "btn_test";
+            btn_test.Size = new Size(75, 23);
+            btn_test.TabIndex = 1;
+            btn_test.Text = "test";
+            btn_test.UseVisualStyleBackColor = true;
+            btn_test.Click += btn_test_Click;
+            // 
             // TestForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btn_test);
             Controls.Add(groupBox_q1);
             Name = "TestForm";
             Text = "TestForm";
@@ -111,5 +124,6 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Label q1;
+        private Button btn_test;
     }
 }
