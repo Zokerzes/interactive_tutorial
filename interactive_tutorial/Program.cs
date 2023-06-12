@@ -1,3 +1,11 @@
+using interactive_tutorial.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 namespace interactive_tutorial
 {
     internal static class Program

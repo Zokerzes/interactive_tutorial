@@ -29,22 +29,26 @@ namespace interactive_tutorial
             {
                 if (item.Role==UserRole.Manager)
                 {
-                    topiclistBox.Items.Add(item);
+                    topicMathematik_ListBox.Items.Add(item);
                 }
             }
         }
-         private void changeRate_Button2_Click(object sender, EventArgs e)
-         {
-            if (topiclistBox.SelectedIndex==-1) return;
-            User user = (User)topiclistBox.SelectedItem;
-            
-        
-         }
-        private void SaveButton_Click(object sender, EventArgs e)
+        private void changeRate_Button2_Click(object sender, EventArgs e)
         {
+            if (topicMathematik_ListBox.SelectedIndex==-1) return;
+            User user = (User)topicMathematik_ListBox.SelectedItem;
+            user.Rate = (int)employeeRate_NumericUpDown.Value;
+
+            topicMathematik_ListBox.Items[topicMathematik_ListBox.SelectedIndex]= user;
+
 
         }
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            SerializeService.ObjSerialize(userData.GetType(), userData, new XmlSerialize());
+            
+        }
 
-       
+
     }
 }
