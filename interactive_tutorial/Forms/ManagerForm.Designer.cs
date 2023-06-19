@@ -101,7 +101,7 @@
             Controls.Add(changeRate_Button2);
             Controls.Add(button1);
             Name="ManagerForm";
-            Text="MainForm";
+            Text="ManagerForm";
             ((System.ComponentModel.ISupportInitialize)employeeRate_NumericUpDown).EndInit();
             ResumeLayout(false);
         }
