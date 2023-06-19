@@ -44,16 +44,16 @@ namespace interactive_tutorial.Forms
             this.Visible=true;
         }
 
-        private void Autorization_Button_Click(object sender, EventArgs e)
-        {
-            AutorizationForm autorizationForm = new AutorizationForm();
-            this.Visible = false;
-            if(autorizationForm.ShowDialog()==DialogResult.OK)
-            {
+        //private void Autorization_Button_Click(object sender, EventArgs e)
+        //{
+        //    AutorizationForm autorizationForm = new AutorizationForm();
+        //    this.Visible = false;
+        //    if(autorizationForm.ShowDialog()==DialogResult.OK)
+        //    {
 
-            }
-            this.Visible = true;
-        }
+        //    }
+        //    this.Visible = true;
+        //}
 
         private void Test_Button_Click(object sender, EventArgs e)
         {

@@ -15,6 +15,7 @@ namespace interactive_tutorial.Entities
         void getProgress()
         {
             progress.getProgrss();
+        }
             
         public Progress Progress { get; set; }
 

@@ -36,16 +36,16 @@ namespace interactive_tutorial
 
         #region test{
         //для тестирования
-        private void EntranceButton_Click(object sender, EventArgs e)
-        {
+        //private void EntranceButton_Click(object sender, EventArgs e)
+        //{
 
-            Student student = new Student();
-            TestForm testForm = new TestForm(student);
-            testForm.ShowDialog();
+        //    Student student = new Student();
+        //    TestForm testForm = new TestForm(student);
+        //    testForm.ShowDialog();
            
-            this.DialogResult = DialogResult.OK;
+        //    this.DialogResult = DialogResult.OK;
 
-        }
+        //}
         #endregion 
 
 

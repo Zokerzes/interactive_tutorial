@@ -28,11 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            groupBox_q1 = new GroupBox();
-            q1 = new Label();
-            radioButton1_3 = new RadioButton();
-            radioButton1_2 = new RadioButton();
-            radioButton1_1 = new RadioButton();
             groupBox1 = new GroupBox();
             q2 = new Label();
             radioButton2_3 = new RadioButton();
@@ -54,66 +49,17 @@
             radioButton4_3 = new RadioButton();
             radioButton4_2 = new RadioButton();
             radioButton4_1 = new RadioButton();
-            groupBox_q1.SuspendLayout();
+            radioButton1_1 = new RadioButton();
+            radioButton1_2 = new RadioButton();
+            radioButton1_3 = new RadioButton();
+            q1 = new Label();
+            groupBox_q1 = new GroupBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
+            groupBox_q1.SuspendLayout();
             SuspendLayout();
-            // 
-            // groupBox_q1
-            // 
-            groupBox_q1.Controls.Add(q1);
-            groupBox_q1.Controls.Add(radioButton1_3);
-            groupBox_q1.Controls.Add(radioButton1_2);
-            groupBox_q1.Controls.Add(radioButton1_1);
-            groupBox_q1.Location = new Point(12, 12);
-            groupBox_q1.Name = "groupBox_q1";
-            groupBox_q1.Size = new Size(239, 168);
-            groupBox_q1.TabIndex = 0;
-            groupBox_q1.TabStop = false;
-            // 
-            // q1
-            // 
-            q1.AutoSize = true;
-            q1.Location = new Point(15, 19);
-            q1.Name = "q1";
-            q1.Size = new Size(56, 15);
-            q1.TabIndex = 2;
-            q1.Text = "вопрос 1";
-            // 
-            // radioButton1_3
-            // 
-            radioButton1_3.AutoSize = true;
-            radioButton1_3.Location = new Point(15, 134);
-            radioButton1_3.Name = "radioButton1_3";
-            radioButton1_3.Size = new Size(65, 19);
-            radioButton1_3.TabIndex = 1;
-            radioButton1_3.TabStop = true;
-            radioButton1_3.Text = "ответ_3";
-            radioButton1_3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1_2
-            // 
-            radioButton1_2.AutoSize = true;
-            radioButton1_2.Location = new Point(15, 109);
-            radioButton1_2.Name = "radioButton1_2";
-            radioButton1_2.Size = new Size(65, 19);
-            radioButton1_2.TabIndex = 1;
-            radioButton1_2.TabStop = true;
-            radioButton1_2.Text = "ответ_2";
-            radioButton1_2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1_1
-            // 
-            radioButton1_1.AutoSize = true;
-            radioButton1_1.Location = new Point(15, 84);
-            radioButton1_1.Name = "radioButton1_1";
-            radioButton1_1.Size = new Size(65, 19);
-            radioButton1_1.TabIndex = 0;
-            radioButton1_1.TabStop = true;
-            radioButton1_1.Text = "ответ_1";
-            radioButton1_1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -178,6 +124,7 @@
             btnApply.TabIndex = 4;
             btnApply.Text = "Ответить";
             btnApply.UseVisualStyleBackColor = true;
+            btnApply.Click += btnApply_Click;
             // 
             // groupBox2
             // 
@@ -207,7 +154,6 @@
             radioButton3_3.Name = "radioButton3_3";
             radioButton3_3.Size = new Size(65, 19);
             radioButton3_3.TabIndex = 1;
-            radioButton3_3.TabStop = true;
             radioButton3_3.Text = "ответ_3";
             radioButton3_3.UseVisualStyleBackColor = true;
             // 
@@ -218,7 +164,6 @@
             radioButton3_2.Name = "radioButton3_2";
             radioButton3_2.Size = new Size(65, 19);
             radioButton3_2.TabIndex = 1;
-            radioButton3_2.TabStop = true;
             radioButton3_2.Text = "ответ_2";
             radioButton3_2.UseVisualStyleBackColor = true;
             // 
@@ -341,6 +286,60 @@
             radioButton4_1.Text = "ответ_1";
             radioButton4_1.UseVisualStyleBackColor = true;
             // 
+            // radioButton1_1
+            // 
+            radioButton1_1.AutoSize = true;
+            radioButton1_1.Location = new Point(15, 84);
+            radioButton1_1.Name = "radioButton1_1";
+            radioButton1_1.Size = new Size(65, 19);
+            radioButton1_1.TabIndex = 0;
+            radioButton1_1.TabStop = true;
+            radioButton1_1.Text = "ответ_1";
+            radioButton1_1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1_2
+            // 
+            radioButton1_2.AutoSize = true;
+            radioButton1_2.Location = new Point(15, 109);
+            radioButton1_2.Name = "radioButton1_2";
+            radioButton1_2.Size = new Size(65, 19);
+            radioButton1_2.TabIndex = 1;
+            radioButton1_2.TabStop = true;
+            radioButton1_2.Text = "ответ_2";
+            radioButton1_2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1_3
+            // 
+            radioButton1_3.AutoSize = true;
+            radioButton1_3.Location = new Point(15, 134);
+            radioButton1_3.Name = "radioButton1_3";
+            radioButton1_3.Size = new Size(65, 19);
+            radioButton1_3.TabIndex = 1;
+            radioButton1_3.TabStop = true;
+            radioButton1_3.Text = "ответ_3";
+            radioButton1_3.UseVisualStyleBackColor = true;
+            // 
+            // q1
+            // 
+            q1.AutoSize = true;
+            q1.Location = new Point(15, 19);
+            q1.Name = "q1";
+            q1.Size = new Size(56, 15);
+            q1.TabIndex = 2;
+            q1.Text = "вопрос 1";
+            // 
+            // groupBox_q1
+            // 
+            groupBox_q1.Controls.Add(q1);
+            groupBox_q1.Controls.Add(radioButton1_3);
+            groupBox_q1.Controls.Add(radioButton1_2);
+            groupBox_q1.Controls.Add(radioButton1_1);
+            groupBox_q1.Location = new Point(12, 12);
+            groupBox_q1.Name = "groupBox_q1";
+            groupBox_q1.Size = new Size(239, 168);
+            groupBox_q1.TabIndex = 0;
+            groupBox_q1.TabStop = false;
+            // 
             // TestForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -355,8 +354,6 @@
             Name = "TestForm";
             Text = "TestForm";
             Load += TestForm_Load;
-            groupBox_q1.ResumeLayout(false);
-            groupBox_q1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -365,16 +362,12 @@
             groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
+            groupBox_q1.ResumeLayout(false);
+            groupBox_q1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private GroupBox groupBox_q1;
-        private RadioButton radioButton1_3;
-        private RadioButton radioButton1_2;
-        private RadioButton radioButton1_1;
-        private Label q1;
         private GroupBox groupBox1;
         private Label q2;
         private RadioButton radioButton2_3;
@@ -396,5 +389,10 @@
         private RadioButton radioButton4_3;
         private RadioButton radioButton4_2;
         private RadioButton radioButton4_1;
+        private RadioButton radioButton1_1;
+        private RadioButton radioButton1_2;
+        private RadioButton radioButton1_3;
+        private Label q1;
+        private GroupBox groupBox_q1;
     }
 }

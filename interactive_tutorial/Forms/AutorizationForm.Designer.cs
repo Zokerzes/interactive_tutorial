@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
 
-            loginTextBox = new TextBox();
-            passwordTextBox = new TextBox();
+           // loginTextBox = new TextBox();
+           //passwordTextBox = new TextBox();
             label1 = new Label();
             label2 = new Label();
             entranceButton = new Button();
@@ -95,7 +95,6 @@
             entranceButton.TabIndex=4;
             entranceButton.Text="Вход";
             entranceButton.UseVisualStyleBackColor=true;
-            entranceButton.Click+=EntranceButton_Click;
             // 
             // autorizationButton
             // 
@@ -189,7 +188,6 @@
             btnStartFormTest.TabIndex = 4;
             btnStartFormTest.Text = "_start_form_test_";
             btnStartFormTest.UseVisualStyleBackColor = true;
-            btnStartFormTest.Click += EntranceButton_Click;
             // 
             // AutorizationForm
             // 
