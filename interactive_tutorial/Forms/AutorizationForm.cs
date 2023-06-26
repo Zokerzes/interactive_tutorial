@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 
 namespace interactive_tutorial
 {
@@ -33,10 +34,19 @@ namespace interactive_tutorial
             this.DialogResult = DialogResult.OK;
         }
 
-        private void EntranceButton_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
+        #region test{
+        //для тестирования
+        //private void EntranceButton_Click(object sender, EventArgs e)
+        //{
+
+        //    Student student = new Student();
+        //    TestForm testForm = new TestForm(student);
+        //    testForm.ShowDialog();
+           
+        //    this.DialogResult = DialogResult.OK;
+
+        //}
+        #endregion 
 
 
     }

@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+
+           // loginTextBox = new TextBox();
+           //passwordTextBox = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            entranceButton = new Button();
+            autorizationButton = new Button();
+            btnStartFormTest = new Button();
+
             login_TextBox=new TextBox();
             password_TextBox=new TextBox();
             label1=new Label();
@@ -43,6 +52,7 @@
             FirstName_TextBox=new TextBox();
             label5=new Label();
             label6=new Label();
+
             SuspendLayout();
             // 
             // login_TextBox
@@ -85,7 +95,6 @@
             entranceButton.TabIndex=4;
             entranceButton.Text="Вход";
             entranceButton.UseVisualStyleBackColor=true;
-            entranceButton.Click+=EntranceButton_Click;
             // 
             // autorizationButton
             // 
@@ -171,6 +180,15 @@
             label6.TabIndex=14;
             label6.Text="Last";
             // 
+            // btnStartFormTest
+            // 
+            btnStartFormTest.Location = new Point(15, 369);
+            btnStartFormTest.Name = "btnStartFormTest";
+            btnStartFormTest.Size = new Size(119, 26);
+            btnStartFormTest.TabIndex = 4;
+            btnStartFormTest.Text = "_start_form_test_";
+            btnStartFormTest.UseVisualStyleBackColor = true;
+            // 
             // AutorizationForm
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
@@ -186,6 +204,7 @@
             Controls.Add(label3);
             Controls.Add(Email_TextBox);
             Controls.Add(autorizationButton);
+            Controls.Add(btnStartFormTest);
             Controls.Add(entranceButton);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -205,6 +224,9 @@
         private Label label2;
         private Button entranceButton;
         private Button autorizationButton;
+
+        private Button btnStartFormTest;
+
         private TextBox Email_TextBox;
         private Label label3;
         private TextBox PhoneNumber_TextBox;
@@ -214,5 +236,6 @@
         private TextBox FirstName_TextBox;
         private Label label5;
         private Label label6;
+
     }
 }

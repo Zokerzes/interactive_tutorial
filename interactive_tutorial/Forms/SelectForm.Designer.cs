@@ -51,7 +51,6 @@
             Autorization_Button.TabIndex=1;
             Autorization_Button.Text="Авторизация";
             Autorization_Button.UseVisualStyleBackColor=true;
-            Autorization_Button.Click+=Autorization_Button_Click;
             // 
             // Test_Button
             // 
