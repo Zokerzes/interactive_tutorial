@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace interactive_tutorial.EntityMappings
 {
-    internal class ContentEntityMap : IEntityTypeConfiguration<Content>
+    public class ContentEntityMap : IEntityTypeConfiguration<Content>
     {
         public void Configure(EntityTypeBuilder<Content> builder)
         {
