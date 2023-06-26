@@ -22,9 +22,5 @@ namespace interactive_tutorial
         {
         }
 
-        private void EntranceButton_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.OK;
-        }
     }
 }

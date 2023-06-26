@@ -2,6 +2,7 @@ using interactive_tutorial.Context;
 using Microsoft.EntityFrameworkCore;
 
 namespace interactive_tutorial
+
 {
     internal static class Program
     {
@@ -14,7 +15,7 @@ namespace interactive_tutorial
             var context = new InteractiveTutorialContext();
             context.Database.Migrate();
             ApplicationConfiguration.Initialize();
-            Application.Run(new AutorizationForm());
+            Application.Run(new TestForm());
         }
     }
 }
