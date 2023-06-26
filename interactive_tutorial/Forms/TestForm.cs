@@ -1,4 +1,7 @@
-﻿using interactive_tutorial.Entities;
+﻿using interactive_tutorial.Context;
+using interactive_tutorial.entities;
+using interactive_tutorial.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
@@ -12,11 +15,12 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using RadioButton = System.Windows.Forms.RadioButton;
 
+
 namespace interactive_tutorial
 {
     public partial class TestForm : Form
     {
-        
+        readonly InteractiveTutorialContext _context;
         // заглушка - надо брать из базы
         public List<string> questionsTexts= new List<string>(5) 
         {
@@ -39,6 +43,11 @@ namespace interactive_tutorial
         public TestForm()
         {
             InitializeComponent();
+            // нужен сервис как класс
+            _context = new InteractiveTutorialContext();
+            
+
+
             questionslabels = new List<Label>() { q1,q2,q3,q4,q5 };
             radioButtonsTexts = new List<RadioButton>() 
             {
@@ -60,12 +69,20 @@ namespace interactive_tutorial
             return allScore;
         }
 
+        public  string conAsync()
+        {
+            return   _context.questionsTexts.Select(x=>x.Questions).FirstOrDefault();
+        }
         private void TestForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 5; i++)
-            {
-                questionslabels.ToArray()[i].Text = questionsTexts.ToArray()[i];
-            }
+            MessageBox.Show(_context.questionsTexts.FirstOrDefault().ToString());
+            
+
+            //for (int i = 1; i < 6; i++)
+            //{
+            //    //questionslabels.ToArray()[i].Text = questionsTexts.ToArray()[i];
+            //    questionslabels.ToArray()[i].Text = _context.questionsTexts.ToArray()[i].ToString();
+            //}
             //radioButtonsTexts.ToArray()[0].Text = answersTexts.ToArray()[0];
             for (int i = 0; i < 15; i++)
             {
