@@ -1,5 +1,6 @@
 ﻿using interactive_tutorial.Entities;
 
+
 namespace interactive_tutorial
 {
     public partial class AutorizationForm : Form
@@ -18,9 +19,7 @@ namespace interactive_tutorial
             userRole_ComboBox.SelectedIndex = 0;
         }
 
-        public AutorizationForm()
-        {
-        }
+
 
     }
 }

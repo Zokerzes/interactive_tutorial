@@ -9,13 +9,6 @@
 
         public int Chapter { get; set; } = 0;
 
-        public Progress()
-        {
-            TestScore = new Dictionary<int, int>()
-            {
-                { 0, 0 },
-            };
-        }
 
         public Progress(int id, int topic, int chapter, Dictionary<int, int> testScore)
         {
