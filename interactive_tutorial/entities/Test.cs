@@ -10,9 +10,9 @@ namespace interactive_tutorial.entities
     public class Test
     {
         public int Id { get; set; }
-        public virtual ICollection<questionsTexts> QuestionsTexts { get; set; } = new List<questionsTexts>();
-        public virtual ICollection<answersTexts> Answers { get;set; } = new List<answersTexts>();
-        public virtual ICollection<TrueAnswers> TrueAnswers { get; set; } = new List<TrueAnswers>();
+        public virtual questionsTexts QuestionsTexts { get; set; }
+        public virtual answersTexts Answers { get;set; }
+        public virtual TrueAnswers TrueAnswers { get; set; }
 
 
     }
