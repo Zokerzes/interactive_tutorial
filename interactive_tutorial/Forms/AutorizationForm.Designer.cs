@@ -104,7 +104,6 @@
             autorizationButton.TabIndex=5;
             autorizationButton.Text="Авторизация";
             autorizationButton.UseVisualStyleBackColor=true;
-            autorizationButton.Click+=AutorizationButton_Click;
             // 
             // Email_TextBox
             // 
