@@ -11,7 +11,7 @@ using interactive_tutorial.Context;
 namespace interactive_tutorial.Migrations
 {
     [DbContext(typeof(InteractiveTutorialContext))]
-    [Migration("20230627180130_Initial")]
+    [Migration("20230627181347_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -45,9 +45,6 @@ namespace interactive_tutorial.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Login")
-                        .IsUnique();
 
                     b.ToTable("Admins");
                 });

@@ -147,12 +147,6 @@ namespace interactive_tutorial.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Admins_Login",
-                table: "Admins",
-                column: "Login",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Students_Login",
                 table: "Students",
                 column: "Login",
