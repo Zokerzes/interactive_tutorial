@@ -11,8 +11,6 @@ namespace interactive_tutorial.EntityMappings
         {
             builder.HasKey(x => x.Id);
 
-            builder.HasIndex(x => x.Login).IsUnique();
-
             builder.Property(x => x.Login).HasMaxLength(DefaultDB.STRING_VALUE_MAX_LENGTH);
         }
     }
