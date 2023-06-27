@@ -16,10 +16,10 @@ namespace interactive_tutorial.Model
 
         }
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<Manager> Managers { get; set; }
+        
         public DbSet<Progress> Progresses { get; set; }
         public DbSet<Student> Students { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<UserData> userDatas { get; set; }
+       
     }
 }
