@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace interactive_tutorial.entities
 {
-    internal class IUser
+    public interface IUser
     {
     }
 }
