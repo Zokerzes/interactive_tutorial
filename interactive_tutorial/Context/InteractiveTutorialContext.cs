@@ -1,5 +1,4 @@
-﻿using interactive_tutorial.entities;
-using interactive_tutorial.Entities;
+﻿using interactive_tutorial.Entities;
 using interactive_tutorial.EntityMappings;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
@@ -22,7 +21,7 @@ namespace interactive_tutorial.Context
 
         public virtual DbSet<Progress> Progresses { get; set; }
 
-        public virtual DbSet<Content> Contents { get; set;}
+        public virtual DbSet<Content> Contents { get; set; }
 
         public virtual DbSet<Test> Tests { get; set; }
 
