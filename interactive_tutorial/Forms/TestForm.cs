@@ -75,7 +75,7 @@ namespace interactive_tutorial
         }
         private void TestForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(conAsync().ToString());
+            MessageBox.Show(_context.questionsTexts.FirstOrDefault().ToString());
             
 
             //for (int i = 1; i < 6; i++)

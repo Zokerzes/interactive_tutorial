@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "interactive_tutorial", "interactive_tutorial\interactive_tutorial.csproj", "{B82A6449-07B1-49B5-8BB4-1FEE60B13090}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database1", "C:\Users\ZeS\source\repos\Database1\Database1.sqlproj", "{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interactive_tutorial", "interactive_tutorial\interactive_tutorial.csproj", "{B82A6449-07B1-49B5-8BB4-1FEE60B13090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,6 @@ Global
 		{B82A6449-07B1-49B5-8BB4-1FEE60B13090}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B82A6449-07B1-49B5-8BB4-1FEE60B13090}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B82A6449-07B1-49B5-8BB4-1FEE60B13090}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Release|Any CPU.Build.0 = Release|Any CPU
-		{86F58BE1-B07D-4D51-BD55-CD1AFCD19711}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
