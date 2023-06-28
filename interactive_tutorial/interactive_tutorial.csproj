@@ -19,11 +19,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="App_Data\Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App_Data\DataBase.ldf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Update="App_Data\Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <None Update="App_Data\DataBase.mdf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
