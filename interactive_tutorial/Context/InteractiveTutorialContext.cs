@@ -26,12 +26,11 @@ namespace interactive_tutorial.Context
 
         public virtual DbSet<Test> Tests { get; set; }
 
-        public virtual DbSet<answersTexts> answersTexts { get; set; }
+        public virtual DbSet<AnswerText> AnswerTexts { get; set; }
 
-        public virtual DbSet<questionsTexts> questionsTexts { get; set; }
-        public virtual DbSet<TrueAnswers> TrueAnswers { get; set; }
+        public virtual DbSet<QuestionText> QuestionTexts { get; set; }
 
-
+        public virtual DbSet<TrueAnswer> TrueAnswers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -46,11 +45,10 @@ namespace interactive_tutorial.Context
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(StudentEntityMap).Assembly);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ProgressEntityMap).Assembly);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ContentEntityMap).Assembly);
-
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(TestEntityMap).Assembly);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(questionsTextsEntityMap).Assembly);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(answersTextsEntityMap).Assembly);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(TrueAnswersEntityMap).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(QuestionTextEntityMap).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AnswerTextEntityMap).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(TrueAnswerEntityMap).Assembly);
 
             OnModelCreatingPartial(modelBuilder);
         }

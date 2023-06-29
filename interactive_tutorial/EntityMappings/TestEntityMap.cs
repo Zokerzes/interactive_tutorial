@@ -1,13 +1,6 @@
-﻿using interactive_tutorial.Constants;
-using interactive_tutorial.entities;
-using interactive_tutorial.Entities;
+﻿using interactive_tutorial.entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace interactive_tutorial.EntityMappings
 {
@@ -17,9 +10,11 @@ namespace interactive_tutorial.EntityMappings
         {
             builder.HasKey(x => x.Id);
 
-            builder.HasOne(x => x.QuestionsTexts);
-            builder.HasOne(x => x.Answers);
-            builder.HasOne(x => x.TrueAnswers);
+            builder.HasOne(x => x.QuestionText);
+
+            builder.HasOne(x => x.Answer);
+
+            builder.HasOne(x => x.TrueAnswer);
         }
     }
 }

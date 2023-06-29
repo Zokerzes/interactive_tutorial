@@ -8,8 +8,8 @@ namespace interactive_tutorial
     {
         readonly InteractiveTutorialContext _context;
 
-        readonly List<Label> questionslabels = new();
-        readonly List<RadioButton> radioButtonsTexts = new();
+        readonly List<Label> questionslabels;
+        readonly List<RadioButton> radioButtonsTexts;
 
         public TestForm()
         {
@@ -34,7 +34,7 @@ namespace interactive_tutorial
             int allScore = 0;
             foreach (var number in _context.TrueAnswers)
             {
-                if (radioButtonsTexts.ToArray()[number.TrueAnswersNumber].Checked) allScore++;
+                if (radioButtonsTexts.ToArray()[number.Number - 1].Checked) allScore++;
             }
 
             return allScore;
@@ -42,18 +42,18 @@ namespace interactive_tutorial
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < _context.questionsTexts.Count(); i++)
+            for (int i = 0; i < _context.QuestionTexts.Count(); i++)
             {
-                questionslabels[i].Text = _context.questionsTexts.ToArray()[i].Questions;
+                questionslabels[i].Text = _context.QuestionTexts.ToArray()[i].Question;
             }
 
-            for (int i = 0; i < _context.answersTexts.Count(); i++)
+            for (int i = 0; i < _context.AnswerTexts.Count(); i++)
             {
-                radioButtonsTexts[i].Text = _context.answersTexts.ToArray()[i].Answers;
+                radioButtonsTexts[i].Text = _context.AnswerTexts.ToArray()[i].Answer;
             }
         }
 
-        private void btnApply_Click(object sender, EventArgs e)
+        private void BtnApply_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"Вы ответили верно на  {Result()} вопросов ");
         }

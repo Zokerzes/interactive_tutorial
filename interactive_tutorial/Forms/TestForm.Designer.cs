@@ -124,7 +124,7 @@
             btnApply.TabIndex = 4;
             btnApply.Text = "Ответить";
             btnApply.UseVisualStyleBackColor = true;
-            btnApply.Click += btnApply_Click;
+            btnApply.Click += BtnApply_Click;
             // 
             // groupBox2
             // 
