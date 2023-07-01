@@ -6,40 +6,36 @@ namespace interactive_tutorial
 {
     public partial class ManagerForm : Form
     {
-        UserData userData = new UserData();
+       public List<string> TextAd = new List<string>(10)
+       {
+            "Картельные сговоры не допускают ситуации, при которой базовые сценарии поведения пользователей набирают",
+            "популярность среди определенных слоев населения, а значит, должны быть своевременно верифицированы. Также",
+           "как понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки",
+           "экономической целесообразности принимаемых решений. Приятно, граждане, наблюдать, как активно",
+           "развивающиеся страны третьего мира рассмотрены исключительно в разрезе маркетинговых и финансовых",
+           "предпосылок. Задача организации, в особенности же перспективное планирование в значительной степени",
+           "обусловливает важность своевременного выполнения сверхзадачи.",
+           "Но высокое качество позиционных исследований, а также свежий взгляд на привычные вещи — безусловно открывает",
+           "новые горизонты для анализа существующих паттернов поведения. Как уже неоднократно упомянуто, явные признаки",
+           "победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть"
+
+       };     
+        
+
+
         public ManagerForm()
         {
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        private void employeeRate_NumericUpDown_ValueChanged(object sender, EventArgs e)
         {
-            userData=(UserData)SerializeService.ObjDeserialize(userData.GetType(), userData, new XmlSerialize());
-
-            foreach (User item in userData.AllUsers)
+            int tex = Convert.ToInt32(TextElement_NumericUpDown.Value.ToString());
+            if (tex >0 && tex<TextAd.Count)
             {
-                if (item.Role==UserRole.Manager)
-                {
-                    topicMathematik_ListBox.Items.Add(item);
-                }
+                textBox1.Text = TextAd.ToArray()[tex];
+                
             }
         }
-        private void changeRate_Button2_Click(object sender, EventArgs e)
-        {
-            if (topicMathematik_ListBox.SelectedIndex==-1) return;
-            User user = (User)topicMathematik_ListBox.SelectedItem;
-            user.Rate = (int)employeeRate_NumericUpDown.Value;
-
-            topicMathematik_ListBox.Items[topicMathematik_ListBox.SelectedIndex]= user;
-
-
-        }
-        private void SaveButton_Click(object sender, EventArgs e)
-        {
-            SerializeService.ObjSerialize(userData.GetType(), userData, new XmlSerialize());
-
-        }
-
-
     }
 }
