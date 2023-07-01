@@ -1,4 +1,5 @@
 using interactive_tutorial.Context;
+using interactive_tutorial.Forms;
 using Microsoft.EntityFrameworkCore;
 
 namespace interactive_tutorial
@@ -15,7 +16,8 @@ namespace interactive_tutorial
             var context = new InteractiveTutorialContext();
             context.Database.Migrate();
             ApplicationConfiguration.Initialize();
-            Application.Run(new TestForm());
+            //Application.Run(new TestForm());
+            Application.Run(new MainForm());
         }
     }
 }
