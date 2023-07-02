@@ -5,7 +5,7 @@
 namespace interactive_tutorial.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class INIT : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,16 +25,16 @@ namespace interactive_tutorial.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "answersTexts",
+                name: "AnswerTexts",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Answers = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Answer = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_answersTexts", x => x.Id);
+                    table.PrimaryKey("PK_AnswerTexts", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -67,16 +67,16 @@ namespace interactive_tutorial.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "questionsTexts",
+                name: "QuestionTexts",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Questions = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Question = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_questionsTexts", x => x.Id);
+                    table.PrimaryKey("PK_QuestionTexts", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,7 +85,7 @@ namespace interactive_tutorial.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TrueAnswersNumber = table.Column<int>(type: "int", nullable: false)
+                    Number = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -119,29 +119,29 @@ namespace interactive_tutorial.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    QuestionsTextsId = table.Column<int>(type: "int", nullable: false),
-                    AnswersId = table.Column<int>(type: "int", nullable: false),
-                    TrueAnswersId = table.Column<int>(type: "int", nullable: false)
+                    QuestionTextId = table.Column<int>(type: "int", nullable: false),
+                    AnswerId = table.Column<int>(type: "int", nullable: false),
+                    TrueAnswerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Tests", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Tests_TrueAnswers_TrueAnswersId",
-                        column: x => x.TrueAnswersId,
+                        name: "FK_Tests_AnswerTexts_AnswerId",
+                        column: x => x.AnswerId,
+                        principalTable: "AnswerTexts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Tests_QuestionTexts_QuestionTextId",
+                        column: x => x.QuestionTextId,
+                        principalTable: "QuestionTexts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Tests_TrueAnswers_TrueAnswerId",
+                        column: x => x.TrueAnswerId,
                         principalTable: "TrueAnswers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Tests_answersTexts_AnswersId",
-                        column: x => x.AnswersId,
-                        principalTable: "answersTexts",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Tests_questionsTexts_QuestionsTextsId",
-                        column: x => x.QuestionsTextsId,
-                        principalTable: "questionsTexts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -164,19 +164,19 @@ namespace interactive_tutorial.Migrations
                 column: "ProgressId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tests_AnswersId",
+                name: "IX_Tests_AnswerId",
                 table: "Tests",
-                column: "AnswersId");
+                column: "AnswerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tests_QuestionsTextsId",
+                name: "IX_Tests_QuestionTextId",
                 table: "Tests",
-                column: "QuestionsTextsId");
+                column: "QuestionTextId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Tests_TrueAnswersId",
+                name: "IX_Tests_TrueAnswerId",
                 table: "Tests",
-                column: "TrueAnswersId");
+                column: "TrueAnswerId");
         }
 
         /// <inheritdoc />
@@ -198,13 +198,13 @@ namespace interactive_tutorial.Migrations
                 name: "Progresses");
 
             migrationBuilder.DropTable(
+                name: "AnswerTexts");
+
+            migrationBuilder.DropTable(
+                name: "QuestionTexts");
+
+            migrationBuilder.DropTable(
                 name: "TrueAnswers");
-
-            migrationBuilder.DropTable(
-                name: "answersTexts");
-
-            migrationBuilder.DropTable(
-                name: "questionsTexts");
         }
     }
 }

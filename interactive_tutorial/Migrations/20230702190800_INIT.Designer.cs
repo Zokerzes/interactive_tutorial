@@ -11,8 +11,8 @@ using interactive_tutorial.Context;
 namespace interactive_tutorial.Migrations
 {
     [DbContext(typeof(InteractiveTutorialContext))]
-    [Migration("20230629073624_Fix")]
-    partial class Fix
+    [Migration("20230702190800_INIT")]
+    partial class INIT
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

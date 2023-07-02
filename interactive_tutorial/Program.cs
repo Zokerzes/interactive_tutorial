@@ -16,8 +16,8 @@ namespace interactive_tutorial
             var context = new InteractiveTutorialContext();
             context.Database.Migrate();
             ApplicationConfiguration.Initialize();
-            //Application.Run(new TestForm());
-            Application.Run(new MainForm());
+            Application.Run(new TestForm());
+           // Application.Run(new MainForm());
         }
     }
 }
