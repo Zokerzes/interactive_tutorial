@@ -1,23 +1,41 @@
-﻿using interactive_tutorial.Entities;
+﻿using interactive_tutorial.entities;
 using interactive_tutorial.Entities;
 using interactive_tutorial.Service;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace interactive_tutorial
 {
     public partial class ManagerForm : Form
     {
+       public List<string> TextAd = new List<string>(10)
+       {
+            "Картельные сговоры не допускают ситуации, при которой базовые сценарии поведения пользователей набирают",
+            "популярность среди определенных слоев населения, а значит, должны быть своевременно верифицированы. Также",
+           "как понимание сути ресурсосберегающих технологий представляет собой интересный эксперимент проверки",
+           "экономической целесообразности принимаемых решений. Приятно, граждане, наблюдать, как активно",
+           "развивающиеся страны третьего мира рассмотрены исключительно в разрезе маркетинговых и финансовых",
+           "предпосылок. Задача организации, в особенности же перспективное планирование в значительной степени",
+           "обусловливает важность своевременного выполнения сверхзадачи.",
+           "Но высокое качество позиционных исследований, а также свежий взгляд на привычные вещи — безусловно открывает",
+           "новые горизонты для анализа существующих паттернов поведения. Как уже неоднократно упомянуто, явные признаки",
+           "победы институционализации набирают популярность среди определенных слоев населения, а значит, должны быть"
+
+       };     
+        
+
+
         public ManagerForm()
         {
             InitializeComponent();
+        }
+
+        private void employeeRate_NumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            int tex = Convert.ToInt32(TextElement_NumericUpDown.Value.ToString());
+            if (tex >=0 && tex<TextAd.Count)
+            {
+                textBox1.Text = TextAd.ToArray()[tex];
+                
+            }
         }
     }
 }
